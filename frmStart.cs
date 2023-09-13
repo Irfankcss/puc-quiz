@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace puc_quiz
 {
-    public partial class Form1 : Form
+    public partial class frmStart : Form
     {
-        public Form1()
+        public frmStart()
         {
             InitializeComponent();
         }
