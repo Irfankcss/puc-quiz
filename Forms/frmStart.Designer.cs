@@ -41,6 +41,7 @@
             this.btnStart.TabIndex = 0;
             this.btnStart.Text = "Start quiz";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnScoreBoard
             // 
@@ -50,6 +51,7 @@
             this.btnScoreBoard.TabIndex = 1;
             this.btnScoreBoard.Text = "Leaderboard";
             this.btnScoreBoard.UseVisualStyleBackColor = true;
+            this.btnScoreBoard.Click += new System.EventHandler(this.btnScoreBoard_Click);
             // 
             // btnExit
             // 
@@ -59,6 +61,7 @@
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // frmStart
             // 
@@ -68,8 +71,9 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnScoreBoard);
             this.Controls.Add(this.btnStart);
+            this.MaximizeBox = false;
             this.Name = "frmStart";
-            this.Text = "Form1";
+            this.Text = "Puc Quiz Menu";
             this.ResumeLayout(false);
 
         }

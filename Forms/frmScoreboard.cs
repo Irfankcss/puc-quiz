@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace puc_quiz
+namespace puc_quiz.Forms
 {
-    public partial class frmStart : Form
+    public partial class frmScoreboard : Form
     {
-        public frmStart()
+        public frmScoreboard()
         {
             InitializeComponent();
         }
