@@ -33,6 +33,7 @@ namespace puc_quiz
 
         private void btnScoreBoard_Click(object sender, EventArgs e)
         {
+            this.Hide();
             var newLeaderBoard = new frmScoreboard();
             newLeaderBoard.ShowDialog();
             this.Close();
