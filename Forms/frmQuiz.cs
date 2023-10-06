@@ -43,7 +43,7 @@ namespace puc_quiz.Forms
             {
                 do
                 {
-                    randQuestionID = rnd.Next(_questions.First().QuestionID, _questions.Last().QuestionID);
+                    randQuestionID = rnd.Next(_questions.First().QuestionID, _questions.Last().QuestionID + 1);
                 }
                 while (isAlreadyShown(randQuestionID));
             }
@@ -138,6 +138,64 @@ namespace puc_quiz.Forms
                     return true;
             }
             return false;
+        }
+
+       
+
+        private bool isCorrect(object sender)
+        {
+            ListOfShown.Add(question.QuestionID);
+            string ans = (sender as Button).Text;
+            if (ans.ToLower().Equals(question.Correct_Answer.ToLower()))
+            {
+               ////
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        private void btnQuestionA_Click(object sender, EventArgs e)
+               {
+                   if (isCorrect(sender))
+                   {
+                       CorrectCounter++;
+                       lblPoints.Text = CorrectCounter.ToString();
+                       NextQuestion();
+                   }
+                   NextQuestion();
+
+               }
+        private void btnQuestionB_Click(object sender, EventArgs e)
+        {
+            if (isCorrect(sender))
+            {
+                CorrectCounter++;
+                lblPoints.Text = CorrectCounter.ToString();
+                NextQuestion();
+            }
+            NextQuestion();
+        }
+        private void btnQuestionC_Click(object sender, EventArgs e)
+        {
+            if (isCorrect(sender))
+            {
+                CorrectCounter++;
+                lblPoints.Text = CorrectCounter.ToString();
+                NextQuestion();
+            }
+            NextQuestion();
+        }
+        private void btnQuestionD_Click(object sender, EventArgs e)
+        {
+            if (isCorrect(sender))
+            {
+                CorrectCounter++;
+                lblPoints.Text = CorrectCounter.ToString();
+                NextQuestion();
+            }
+            NextQuestion();
         }
     }
 }
