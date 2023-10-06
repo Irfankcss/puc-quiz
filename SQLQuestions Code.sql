@@ -20,3 +20,9 @@ FROM Question
 
 INSERT INTO Question(Question_Text,Correct_Answer,Incorrect_Answer1,Incorrect_Answer2,Incorrect_Answer3)
 VALUES('Who won the NBA title in 2012','Miami Heat','Los Angeles Lakers','Houston Rockets','Cleveland Cavaliers')
+
+INSERT INTO Question(Question_Text,Correct_Answer,Incorrect_Answer1,Incorrect_Answer2,Incorrect_Answer3)
+VALUES('Which planet is closest to the sun','Mercury','Jupiter','Earth','Saturn')
+
+INSERT INTO Question(Question_Text,Correct_Answer,Incorrect_Answer1,Incorrect_Answer2,Incorrect_Answer3)
+VALUES('What nut is in the middle of a Ferrero Rocher','Hazelnut','Peanut','Almond','Cashew')
