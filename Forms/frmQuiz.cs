@@ -28,9 +28,24 @@ namespace puc_quiz.Forms
 
         private void frmQuiz_Load(object sender, EventArgs e)
         {
+            MakeTextBackgroundTransparent();
+
+
             _questions=GetQuestions();
             NextQuestion();
 
+        }
+
+        private void MakeTextBackgroundTransparent()
+        {
+            lblQuestionText.AutoSize = true;
+            lblQuestionText.MaximumSize = new Size(400, 0);
+            lblPoints.Parent = pbBackground;
+            lblQuestionText.Parent = pbBackground;
+            btnQuestionA.Parent = pbBackground; 
+            btnQuestionB.Parent = pbBackground;
+            btnQuestionC.Parent = pbBackground;
+            btnQuestionD.Parent = pbBackground;
         }
 
         private void NextQuestion()
@@ -61,7 +76,7 @@ namespace puc_quiz.Forms
                 }
             }
            // lblQuestionText.Text = question.Question_Text + '?';
-            lblQuestionText.Text = question.Question_Text as string + "?!!";
+            lblQuestionText.Text = question.Question_Text as string + "?";
             int spotrnd = rnd.Next(1, 5);
             if (spotrnd == 1)
             {
@@ -196,6 +211,11 @@ namespace puc_quiz.Forms
                 NextQuestion();
             }
             NextQuestion();
+        }
+
+        private void lblQuestionText_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
