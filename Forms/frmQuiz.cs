@@ -18,9 +18,10 @@ namespace puc_quiz.Forms
         List<Question> _questions = new List<Question>();
         List<int> ListOfShown = new List<int>();
         Random rnd = new Random();
-        Question question=new Question();   
+        Question question = new Question();
         int randQuestionID;
         int CorrectCounter = 0;
+        bool isAnswered;
         public frmQuiz()
         {
             InitializeComponent();
@@ -31,7 +32,7 @@ namespace puc_quiz.Forms
             MakeTextBackgroundTransparent();
 
 
-            _questions=GetQuestions();
+            _questions = GetQuestions();
             NextQuestion();
 
         }
@@ -42,7 +43,7 @@ namespace puc_quiz.Forms
             lblQuestionText.MaximumSize = new Size(400, 0);
             lblPoints.Parent = pbBackground;
             lblQuestionText.Parent = pbBackground;
-            btnQuestionA.Parent = pbBackground; 
+            btnQuestionA.Parent = pbBackground;
             btnQuestionB.Parent = pbBackground;
             btnQuestionC.Parent = pbBackground;
             btnQuestionD.Parent = pbBackground;
@@ -52,6 +53,9 @@ namespace puc_quiz.Forms
         {
             if (ListOfShown.Count == 10)
             {
+                frmScore frmScore= new frmScore(CorrectCounter);
+                this.Hide();
+                frmScore.ShowDialog();
                 this.Close();
             }
             if (ListOfShown.Count() > 0)
@@ -75,12 +79,12 @@ namespace puc_quiz.Forms
                     question = id as Question;
                 }
             }
-           // lblQuestionText.Text = question.Question_Text + '?';
+            // lblQuestionText.Text = question.Question_Text + '?';
             lblQuestionText.Text = question.Question_Text as string + "?";
             int spotrnd = rnd.Next(1, 5);
             if (spotrnd == 1)
             {
-                
+
                 btnQuestionA.Text = question.Correct_Answer as string;
                 btnQuestionB.Text = question.Incorrect_Answer1 as string;
                 btnQuestionC.Text = question.Incorrect_Answer2 as string;
@@ -107,11 +111,12 @@ namespace puc_quiz.Forms
                 btnQuestionC.Text = question.Incorrect_Answer2 as string;
                 btnQuestionB.Text = question.Incorrect_Answer3 as string;
             }
+            enableButtons();
+            isAnswered = false;
         }
 
         private List<Question> GetQuestions()
         {
-            string constring = "Data Source=DESKTOP-QRMG5SV;Initial Catalog=Puc_Quiz_Questions.db;Integrated Security=true";
             SqlConnection connection = new SqlConnection(ConfigurationManager.AppSettings["dbcon"]);
 
             List<Question> ques = new List<Question>();
@@ -155,7 +160,7 @@ namespace puc_quiz.Forms
             return false;
         }
 
-       
+
 
         private bool isCorrect(object sender)
         {
@@ -163,7 +168,7 @@ namespace puc_quiz.Forms
             string ans = (sender as Button).Text;
             if (ans.ToLower().Equals(question.Correct_Answer.ToLower()))
             {
-               ////
+                ////
                 return true;
             }
             else
@@ -172,50 +177,83 @@ namespace puc_quiz.Forms
             }
         }
         private void btnQuestionA_Click(object sender, EventArgs e)
-               {
-                   if (isCorrect(sender))
-                   {
-                       CorrectCounter++;
-                       lblPoints.Text = CorrectCounter.ToString();
-                       NextQuestion();
-                   }
-                   NextQuestion();
+        {
+            ButtonClicked((sender as Button));
+            (sender as Button).BackgroundImage = null;
 
-               }
+        }
+
+
+
         private void btnQuestionB_Click(object sender, EventArgs e)
         {
-            if (isCorrect(sender))
-            {
-                CorrectCounter++;
-                lblPoints.Text = CorrectCounter.ToString();
-                NextQuestion();
-            }
-            NextQuestion();
+            ButtonClicked((sender as Button));
+            (sender as Button).BackgroundImage = null;
         }
         private void btnQuestionC_Click(object sender, EventArgs e)
         {
-            if (isCorrect(sender))
-            {
-                CorrectCounter++;
-                lblPoints.Text = CorrectCounter.ToString();
-                NextQuestion();
-            }
-            NextQuestion();
+            ButtonClicked((sender as Button));
+            (sender as Button).BackgroundImage = null;
         }
         private void btnQuestionD_Click(object sender, EventArgs e)
         {
-            if (isCorrect(sender))
+            ButtonClicked((sender as Button));
+            (sender as Button).BackgroundImage = null;
+        }
+        private void ButtonClicked(Button btn)
+        {
+            if (isCorrect(btn))
             {
                 CorrectCounter++;
                 lblPoints.Text = CorrectCounter.ToString();
+                isAnswered = true;
+                disableButtons();
+                btn.BackColor = Color.LimeGreen;
+            }
+            else
+            {
+                btn.BackColor = Color.Red;
+
+
+            }
+            disableButtons();
+            isAnswered = true;
+        }
+
+        private void enableButtons()
+        {
+            btnQuestionA.Enabled = true; btnQuestionB.Enabled = true; btnQuestionC.Enabled = true; btnQuestionD.Enabled = true;
+            Image button_bg = puc_quiz.Resources.button_background;
+            btnQuestionA.BackgroundImage = button_bg;
+            btnQuestionB.BackgroundImage = button_bg;
+            btnQuestionC.BackgroundImage = button_bg;
+            btnQuestionD.BackgroundImage = button_bg;
+            btnQuestionA.BackColor = Color.Transparent;
+            btnQuestionB.BackColor = Color.Transparent;
+            btnQuestionC.BackColor = Color.Transparent;
+            btnQuestionD.BackColor = Color.Transparent;
+        }
+        private void disableButtons()
+        {
+            btnQuestionA.Enabled = false; btnQuestionB.Enabled = false; btnQuestionC.Enabled = false; btnQuestionD.Enabled = false;
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            if (ListOfShown.Count == 10)
+            {
+                this.Close();
+            }
+            if (isAnswered)
+            {
                 NextQuestion();
             }
-            NextQuestion();
+            else
+            {
+                MessageBox.Show("You have to select an answer first.", "Alert", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
-
-        private void lblQuestionText_Click(object sender, EventArgs e)
-        {
-
-        }
+    
     }
+    
 }
