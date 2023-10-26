@@ -78,7 +78,7 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(148, 222);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(267, 39);
+            this.label1.Size = new System.Drawing.Size(258, 38);
             this.label1.TabIndex = 3;
             this.label1.Text = "Enter your name";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -111,7 +111,7 @@
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblYourScore);
             this.Name = "frmScore";
-            this.Text = "Well done";
+            this.Text = "Puc Quiz Score";
             this.ResumeLayout(false);
             this.PerformLayout();
 

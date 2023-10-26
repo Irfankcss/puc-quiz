@@ -28,7 +28,7 @@ namespace puc_quiz
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void btnScoreBoard_Click(object sender, EventArgs e)

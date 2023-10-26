@@ -67,6 +67,7 @@ namespace puc_quiz.Forms
                 {
                     MessageBox.Show("Error while saving score" + e.Message + e.GetType());
                     this.Close();
+                //add
                 }
 
         }
