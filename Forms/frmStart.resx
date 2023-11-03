@@ -924,7 +924,7 @@
   <data name="btnScoreBoard.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAYAAAACcCAYAAAB2pHzrAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAuq9JREFUeF69/WHsfltW1wneV/KfDHaKNODtaRO51VCTumoZqhCoxMyLLm6Vlkxh
+        vwAADr8BOAVTJAAAuq9JREFUeF69/WHsfltW1wneV/KfDHaKNODtaRO51VCTumoZqhCoxMyLLm6Vlkxh
         KIoK1cI4WgUCnaYIgxebTsfuBKxOBxPskgrTL2xFpYGmuzAGujUGTRC1ZAj4RimETMZEBXV84QDdk4Hf
         nM/+ns+z1t7nPM/v+f3vLW6y7lp77bXXXnvttdfeZ5/ze/4vPHvhDQ9v2OAWXulnLzxrWLpglV31vdho
         sJDyixP/xa0cLO/FwQPe+MJnPfwHL3zew+d+2hc8fMEb3v7wH7zhix8+9w3vfPiCz3rfw+9949c9vPKm
@@ -1727,7 +1727,7 @@
   <data name="btnStart.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAYAAAACcCAYAAAB2pHzrAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAuq9JREFUeF69/WHsfltW1wneV/KfDHaKNODtaRO51VCTumoZqhCoxMyLLm6Vlkxh
+        vwAADr8BOAVTJAAAuq9JREFUeF69/WHsfltW1wneV/KfDHaKNODtaRO51VCTumoZqhCoxMyLLm6Vlkxh
         KIoK1cI4WgUCnaYIgxebTsfuBKxOBxPskgrTL2xFpYGmuzAGujUGTRC1ZAj4RimETMZEBXV84QDdk4Hf
         nM/+ns+z1t7nPM/v+f3vLW6y7lp77bXXXnvttdfeZ5/ze/4vPHvhDQ9v2OAWXulnLzxrWLpglV31vdho
         sJDyixP/xa0cLO/FwQPe+MJnPfwHL3zew+d+2hc8fMEb3v7wH7zhix8+9w3vfPiCz3rfw+9949c9vPKm
@@ -2530,7 +2530,7 @@
   <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAfIAAAHxCAYAAACWBT5+AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAA/7JJREFUeF7s/U/Mvt12HgadCc03SNAXNU4PpWo4J7Yjn1ap7OM4cQcMah+f1ooc
+        vwAADr8BOAVTJAAA/7JJREFUeF7s/U/Mvt12HgadCc03SNAXNU4PpWo4J7Yjn1ap7OM4cQcMah+f1ooc
         KYltJSIRiNjOH4QSQeo4E0SlBFcIpEBIFHUAkwQSKEo7CC0SooOSlg4qygQaVCZIICIYgmBQfuxrX/u6
         r2ute9/38zzv+/6+cyp5sL71f+211973Xs++n+f3fl/74osvPgG+9rWvHdBlO7rbdN2VDLjrO9/pju90
         wFd2V/Ir2VtsgEW/Vf9I9x5bYNEfZfesTcfP2Oyw6Ed2wqIf2SV+xuYKP2Nzh0U/sutY9CO7HX7G5hF+

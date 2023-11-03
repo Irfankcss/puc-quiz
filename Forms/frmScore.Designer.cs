@@ -110,7 +110,9 @@
             this.Controls.Add(this.tbName);
             this.Controls.Add(this.lblScore);
             this.Controls.Add(this.lblYourScore);
+            this.MaximizeBox = false;
             this.Name = "frmScore";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Puc Quiz Score";
             this.ResumeLayout(false);
             this.PerformLayout();

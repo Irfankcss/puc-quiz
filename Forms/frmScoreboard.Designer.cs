@@ -55,7 +55,8 @@
             this.dgvScoreboard.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvScoreboard.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvScoreboard.GridColor = System.Drawing.SystemColors.HotTrack;
-            this.dgvScoreboard.Location = new System.Drawing.Point(67, 111);
+            this.dgvScoreboard.Location = new System.Drawing.Point(89, 137);
+            this.dgvScoreboard.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvScoreboard.Name = "dgvScoreboard";
             this.dgvScoreboard.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -68,7 +69,7 @@
             this.dgvScoreboard.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvScoreboard.RowHeadersWidth = 51;
             this.dgvScoreboard.ShowEditingIcon = false;
-            this.dgvScoreboard.Size = new System.Drawing.Size(672, 234);
+            this.dgvScoreboard.Size = new System.Drawing.Size(896, 288);
             this.dgvScoreboard.TabIndex = 0;
             this.dgvScoreboard.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvScoreboard_CellContentClick);
             // 
@@ -78,10 +79,9 @@
             this.lblTop10.BackColor = System.Drawing.Color.Transparent;
             this.lblTop10.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTop10.ForeColor = System.Drawing.Color.White;
-            this.lblTop10.Location = new System.Drawing.Point(61, 45);
-            this.lblTop10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblTop10.Location = new System.Drawing.Point(81, 55);
             this.lblTop10.Name = "lblTop10";
-            this.lblTop10.Size = new System.Drawing.Size(106, 31);
+            this.lblTop10.Size = new System.Drawing.Size(127, 38);
             this.lblTop10.TabIndex = 4;
             this.lblTop10.Text = "Top 10:";
             // 
@@ -92,9 +92,10 @@
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnExit.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExit.ForeColor = System.Drawing.Color.Red;
-            this.btnExit.Location = new System.Drawing.Point(178, 388);
+            this.btnExit.Location = new System.Drawing.Point(237, 478);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(107, 41);
+            this.btnExit.Size = new System.Drawing.Size(143, 50);
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = false;
@@ -107,9 +108,10 @@
             this.btnPlayAgain.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnPlayAgain.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPlayAgain.ForeColor = System.Drawing.Color.White;
-            this.btnPlayAgain.Location = new System.Drawing.Point(528, 388);
+            this.btnPlayAgain.Location = new System.Drawing.Point(704, 478);
+            this.btnPlayAgain.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPlayAgain.Name = "btnPlayAgain";
-            this.btnPlayAgain.Size = new System.Drawing.Size(107, 41);
+            this.btnPlayAgain.Size = new System.Drawing.Size(143, 50);
             this.btnPlayAgain.TabIndex = 6;
             this.btnPlayAgain.Text = "Play again";
             this.btnPlayAgain.UseVisualStyleBackColor = false;
@@ -121,27 +123,28 @@
             this.lblLocal.BackColor = System.Drawing.Color.Transparent;
             this.lblLocal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocal.ForeColor = System.Drawing.Color.White;
-            this.lblLocal.Location = new System.Drawing.Point(388, 368);
-            this.lblLocal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLocal.Location = new System.Drawing.Point(517, 453);
             this.lblLocal.Name = "lblLocal";
-            this.lblLocal.Size = new System.Drawing.Size(39, 18);
+            this.lblLocal.Size = new System.Drawing.Size(47, 22);
             this.lblLocal.TabIndex = 7;
             this.lblLocal.Text = "local";
             // 
             // frmScoreboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::puc_quiz.Resources.background;
-            this.ClientSize = new System.Drawing.Size(800, 469);
+            this.ClientSize = new System.Drawing.Size(1067, 577);
             this.Controls.Add(this.lblLocal);
             this.Controls.Add(this.btnPlayAgain);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.lblTop10);
             this.Controls.Add(this.dgvScoreboard);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmScoreboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Puc Quiz Leaderboard";
             this.Load += new System.EventHandler(this.frmScoreboard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvScoreboard)).EndInit();
