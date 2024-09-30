@@ -22,3 +22,13 @@ To restore a database from a backup in Microsoft SQL Server, I recommend using S
 and change "Initial Catalog=Puc_Quiz_Questions" to "Initial Catalog=[your name of database]"</b>
 ***
 # puc_quiz
+
+Application screenshots:
+![image](https://github.com/user-attachments/assets/0bafe409-71ef-479d-81d0-52171f7e24e3)
+![image](https://github.com/user-attachments/assets/533d1192-50c8-408c-8fed-18aae7cf53e7)
+![image](https://github.com/user-attachments/assets/23bb7762-79f8-41e0-81c4-7a6f1802e7ca)
+![image](https://github.com/user-attachments/assets/7098500f-5f62-4a87-8bce-10530fc4e82d)
+
+
+
+
